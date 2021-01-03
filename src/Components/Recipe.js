@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
         }
      componentDidMount=async()=>{
         const id = this.props.location.state.recipe;
-        const req= await fetch(`https://recipesapi.herokuapp.com/api/get?rId=${id}`);
+        const req= await fetch(`https://cors-anywhere.herokuapp.com/https://recipesapi.herokuapp.com/api/get?rId=${id}`);
         const res= await req.json();
         
          

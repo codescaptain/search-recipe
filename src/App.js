@@ -10,7 +10,7 @@ import "./App.css";
    getRecipe=async(e)=>{
     const recipeName=e.target.elements.recipeName.value;
      e.preventDefault();
-     const api_call= await fetch(`https://recipesapi.herokuapp.com/api/search?q=${recipeName}&page=1`);
+     const api_call= await fetch(`https://cors-anywhere.herokuapp.com/https://recipesapi.herokuapp.com/api/search?q=${recipeName}&page=1`);
      const data =await api_call.json();
      this.setState({
        recipes:data.recipes
